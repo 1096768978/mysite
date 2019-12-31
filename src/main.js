@@ -8,14 +8,18 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
     //导入Hello组件
 import Hello from './components/Hello'
-//导入Aboiut组件
+//导入About组件
 import About from './components/About'
+import Param from './components/param'
+import Paramdetails from './components/Paramdetails'
 //定义路由表
 const routes = [
     //对应Hello组件的路由地址
     { path: '/', component: Hello },
     //对应About组件的路由地址
-    { path: '/about', component: About }
+    { path: '/about', component: About },
+    { path: '/param', component: Param },
+    { path: '/Paramdetails/:id', component: Paramdetails, name: 'Paramdetails' }
 ]
 
 // 创建路由器实例，并且传入`routes`变量作为路由。
